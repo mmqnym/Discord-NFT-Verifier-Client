@@ -1,11 +1,11 @@
 .Verify-Page-bg {
-    background-image: url('https://webcms.asset.catchplay.com/l/assets/img/visual/TW/WBT-TW-002-A1026/newrelease/1080p.jpg?hash=1659901224');
+    background-image: url("./image/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .Verify-Page-rain {
-    background-image: url(rain.png);
+    background-image: url("./image/rain.png");
     animation: rain 1s linear infinite;
 }
 
@@ -24,7 +24,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(thunder.png);
+    background-image: url("./image/thunder.png");
     background-repeat: no-repeat;
     top: -4rem;
     transform: rotate(180deg);
