@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba0958c2.css",
-    "main.js": "/static/js/main.d8df8602.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/thunder.png": "/static/media/thunder.89141af957ead85bc659.png",
-    "static/media/bg.png": "/static/media/bg.eced377d4b9e8863707b.png",
-    "static/media/rain.png": "/static/media/rain.402ac1f303abf9762d5a.png",
-    "static/media/kaiju_logo.png": "/static/media/kaiju_logo.4ead17548aec8969c4d1.png",
-    "static/media/cronos_kaiju.png": "/static/media/cronos_kaiju.2ebef34353a5e3ea2807.png",
-    "index.html": "/index.html",
-    "main.ba0958c2.css.map": "/static/css/main.ba0958c2.css.map",
-    "main.d8df8602.js.map": "/static/js/main.d8df8602.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/Discord-NFT-Verifier-Client/static/css/main.6b5ca08a.css",
+    "main.js": "/Discord-NFT-Verifier-Client/static/js/main.25aa4c3d.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/Discord-NFT-Verifier-Client/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/thunder.png": "/Discord-NFT-Verifier-Client/static/media/thunder.89141af957ead85bc659.png",
+    "static/media/bg.png": "/Discord-NFT-Verifier-Client/static/media/bg.eced377d4b9e8863707b.png",
+    "static/media/rain.png": "/Discord-NFT-Verifier-Client/static/media/rain.402ac1f303abf9762d5a.png",
+    "static/media/kaiju_logo.png": "/Discord-NFT-Verifier-Client/static/media/kaiju_logo.4ead17548aec8969c4d1.png",
+    "static/media/cronos_kaiju.png": "/Discord-NFT-Verifier-Client/static/media/cronos_kaiju.2ebef34353a5e3ea2807.png",
+    "index.html": "/Discord-NFT-Verifier-Client/index.html",
+    "main.6b5ca08a.css.map": "/Discord-NFT-Verifier-Client/static/css/main.6b5ca08a.css.map",
+    "main.25aa4c3d.js.map": "/Discord-NFT-Verifier-Client/static/js/main.25aa4c3d.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/Discord-NFT-Verifier-Client/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba0958c2.css",
-    "static/js/main.d8df8602.js"
+    "static/css/main.6b5ca08a.css",
+    "static/js/main.25aa4c3d.js"
   ]
 }
