@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Discord-NFT-Verifier-Client/static/css/main.6b5ca08a.css",
-    "main.js": "/Discord-NFT-Verifier-Client/static/js/main.25aa4c3d.js",
+    "main.js": "/Discord-NFT-Verifier-Client/static/js/main.8c6d097e.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Discord-NFT-Verifier-Client/static/js/787.c4e7f8f9.chunk.js",
     "static/media/thunder.png": "/Discord-NFT-Verifier-Client/static/media/thunder.89141af957ead85bc659.png",
     "static/media/bg.png": "/Discord-NFT-Verifier-Client/static/media/bg.eced377d4b9e8863707b.png",
@@ -10,11 +10,11 @@
     "static/media/cronos_kaiju.png": "/Discord-NFT-Verifier-Client/static/media/cronos_kaiju.2ebef34353a5e3ea2807.png",
     "index.html": "/Discord-NFT-Verifier-Client/index.html",
     "main.6b5ca08a.css.map": "/Discord-NFT-Verifier-Client/static/css/main.6b5ca08a.css.map",
-    "main.25aa4c3d.js.map": "/Discord-NFT-Verifier-Client/static/js/main.25aa4c3d.js.map",
+    "main.8c6d097e.js.map": "/Discord-NFT-Verifier-Client/static/js/main.8c6d097e.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Discord-NFT-Verifier-Client/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b5ca08a.css",
-    "static/js/main.25aa4c3d.js"
+    "static/js/main.8c6d097e.js"
   ]
 }
