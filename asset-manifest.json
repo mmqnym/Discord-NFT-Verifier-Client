@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ba0958c2.css",
+    "main.js": "/static/js/main.d8df8602.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/thunder.png": "/static/media/thunder.89141af957ead85bc659.png",
+    "static/media/bg.png": "/static/media/bg.eced377d4b9e8863707b.png",
+    "static/media/rain.png": "/static/media/rain.402ac1f303abf9762d5a.png",
+    "static/media/kaiju_logo.png": "/static/media/kaiju_logo.4ead17548aec8969c4d1.png",
+    "static/media/cronos_kaiju.png": "/static/media/cronos_kaiju.2ebef34353a5e3ea2807.png",
+    "index.html": "/index.html",
+    "main.ba0958c2.css.map": "/static/css/main.ba0958c2.css.map",
+    "main.d8df8602.js.map": "/static/js/main.d8df8602.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba0958c2.css",
+    "static/js/main.d8df8602.js"
+  ]
+}
