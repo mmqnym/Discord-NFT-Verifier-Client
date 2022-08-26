@@ -120,18 +120,20 @@ function App() {
 
   // Handling user accountsChanged/disconnect
   useEffect(() => {
-    window.ethereum.on('accountsChanged', async () => {
-      setUserAddr("0x0");
-      setButtonText("Connect Wallet");
-      setActiveCard(false);
-    });
+    if (window.ethereum) {
+      window.ethereum.on('accountsChanged', async () => {
+        setUserAddr("0x0");
+        setButtonText("Connect Wallet");
+        setActiveCard(false);
+      });
 
-    const accountWasChanged = () => {
-      setUserAddr("0x0");
-    }
+      const accountWasChanged = () => {
+        setUserAddr("0x0");
+      }
 
-    return () => {
-      window.ethereum.removeListener('accountsChanged', accountWasChanged);
+      return () => {
+        window.ethereum.removeListener('accountsChanged', accountWasChanged);
+      }
     }
   }, []);
 
