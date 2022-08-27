@@ -18,17 +18,19 @@ function App() {
       fragment.get("token_type"),
     ];
 
-    const fetchUsers = () => {
-      fetch("https://discord.com/api/users/@me", {
-        headers: {
-          authorization: `${tokenType} ${accessToken}`,
-        },
-      })
-        .then((result) => result.json())
-        .then((response) => {
-          setDiscordUser(response);
-        })
-        .catch(console.error);
+    const fetchUsers = async () => {
+      try {
+        const result = await fetch("https://discord.com/api/users/@me", {
+          headers: {
+            authorization: `${tokenType} ${accessToken}`,
+          },
+        });
+
+        const response = await result.json();
+        setDiscordUser(response);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     if (accessToken) {
