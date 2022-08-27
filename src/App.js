@@ -55,11 +55,11 @@ function App() {
   const [userAddress, setUserAddr] = useState("0x0");
   const [disable, setDisableBtn] = useState(false);
   const [buttonText, setButtonText] = useState("Connect Wallet")
+  const [isActive, setActiveBtn] = useState(true);
 
-  let errToast = (msg) => toast.error(msg, {position:"bottom-left", theme:"dark", autoClose: 3000 });
-  let successToast = (msg) => toast.success(msg, {position:"bottom-left", theme:"dark", autoClose: 3000 });
-  let waitingToast = () => toast.loading("Connecting...", {position:"bottom-left", theme:"dark", toastId:"waitToast"});
-  let [isActive, setActiveBtn] = useState(true);
+  const errToast = (msg) => toast.error(msg, {position:"bottom-left", theme:"dark", autoClose: 3000 });
+  const successToast = (msg) => toast.success(msg, {position:"bottom-left", theme:"dark", autoClose: 3000 });
+  const waitingToast = () => toast.loading("Connecting...", {position:"bottom-left", theme:"dark", toastId:"waitToast"});
 
   const connectBtnClicked = async () => {
     if (window.ethereum) {
@@ -167,13 +167,13 @@ function App() {
 
   }, [userAddress]);
 
-  let [showProfileCard, setActiveCard] = useState(false);
+  const [showProfileCard, setActiveCard] = useState(false);
 
   return (
     <div className="Cronos-Kaiju">
       <div className="Verify-Page-bg">
         <div className="Verify-Page-rain bg-center w-full h-[100vh] flex flex-col gap-20 justify-center items-center">
-          <img className="block-block" src={titleImg} alt="title" />
+          <img className="block" src={titleImg} alt="title" />
 
           {/*Profile info card*/}
           <div className={`${showProfileCard ? "flex" : "hidden"} flex-col md:flex-row justify-center items-center z-10 bg-gray-800 rounded-lg border-4 border-double border-purple-400 ring-offset-2 ring-2 ring-purple-200/50`}>
