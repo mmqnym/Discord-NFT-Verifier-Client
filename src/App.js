@@ -74,11 +74,11 @@ function App() {
       theme: "dark",
       autoClose: 3000,
     });
-  const waitingToast = () =>
+  const waitingToast = (id) =>
     toast.loading("Connecting...", {
       position: "bottom-left",
       theme: "dark",
-      toastId: "waitToast",
+      toastId: id,
     });
 
   const connectBtnClicked = async () => {
@@ -102,7 +102,7 @@ function App() {
 
         // Handling when the user refuses to approve and then immediately clicks the connect button.
         if (!toast.isActive("waitToast")) {
-          waitingToast();
+          waitingToast("waitToast");
         } else {
           toast.update("waitToast", {
             render: "connecting",
@@ -169,24 +169,48 @@ function App() {
 
   useEffect(() => {
     if (userAddress !== "0x0") {
-      let success = false;
+      const discordUserName = discordUser["username"];
+      const discordUserID = discordUser["id"];
 
       // call api
-      // get response
+      waitingToast("waitAPIToast");
 
-      // for debug:simulate a verification process
+      const verify = async () => {
+        const userData = {
+          userName: discordUserName,
+          userID: discordUserID,
+          walletAddress: userAddress,
+        };
 
-      success = true;
+        console.log(userData);
 
-      if (success) {
-        setVerifiedStatus("Verified");
-        successToast(
-          "Verified!! You will get verified role(s) as soon as possible."
-        );
-      } else {
-        setVerifiedStatus("Not Verified");
-        errToast("You don't have the NFT(s) we set!");
-      }
+        try {
+          const result = await fetch("/api", {
+            method: "POST",
+            body: JSON.stringify(userData),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+
+          const response = await result.json();
+
+          // for debug
+          console.log(response);
+
+          toast.dismiss("waitAPIToast");
+          setVerifiedStatus("Verified");
+          successToast(
+            "Verified!! You will get verified role(s) as soon as possible."
+          );
+        } catch (error) {
+          toast.dismiss("waitAPIToast");
+          setVerifiedStatus("Not Verified");
+          errToast("You don't have the NFT(s) we set!");
+        }
+      };
+
+      verify();
     }
 
     // for debug
