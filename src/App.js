@@ -74,8 +74,8 @@ function App() {
       theme: "dark",
       autoClose: 3000,
     });
-  const waitingToast = (id) =>
-    toast.loading("Connecting...", {
+  const waitingToast = (id, msg) =>
+    toast.loading(msg, {
       position: "bottom-left",
       theme: "dark",
       toastId: id,
@@ -102,7 +102,7 @@ function App() {
 
         // Handling when the user refuses to approve and then immediately clicks the connect button.
         if (!toast.isActive("waitToast")) {
-          waitingToast("waitToast");
+          waitingToast("waitToast", "Connecting...");
         } else {
           toast.update("waitToast", {
             render: "connecting",
@@ -173,7 +173,7 @@ function App() {
       const discordUserID = discordUser["id"];
 
       // call api
-      waitingToast("waitAPIToast");
+      waitingToast("waitAPIToast", "Verifying...");
 
       const verify = async () => {
         const userData = {
@@ -192,21 +192,29 @@ function App() {
               "Content-Type": "application/json",
             },
           });
-
+          console.log(result);
           const response = await result.json();
 
           // for debug
           console.log(response);
+          const status = response["status"];
 
           toast.dismiss("waitAPIToast");
-          setVerifiedStatus("Verified");
-          successToast(
-            "Verified!! You will get verified role(s) as soon as possible."
-          );
+
+          if (status === "OK") {
+            setVerifiedStatus("Verified");
+            successToast(
+              "Verified!! You will get verified role(s) as soon as possible."
+            );
+          } else {
+            setVerifiedStatus("Not Verified");
+            errToast("You don't have the NFT(s) we set!");
+          }
         } catch (error) {
+          console.log(error);
           toast.dismiss("waitAPIToast");
-          setVerifiedStatus("Not Verified");
-          errToast("You don't have the NFT(s) we set!");
+          setVerifiedStatus("Something went wrong!");
+          errToast("Something went wrong!");
         }
       };
 
