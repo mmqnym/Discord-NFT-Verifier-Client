@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import titleImg from "./image/cronos_kaiju.png";
 import logoImg from "./image/kaiju_logo.png";
+import configs from "./configs.json";
 
 function App() {
   const [discordUser, setDiscordUser] = useState({});
@@ -172,7 +173,6 @@ function App() {
       const discordUserName = discordUser["username"];
       const discordUserID = discordUser["id"];
 
-      // call api
       waitingToast("waitAPIToast", "Verifying...");
 
       const verify = async () => {
@@ -184,24 +184,28 @@ function App() {
 
         console.log(userData);
 
+        // Call API
         try {
-          const result = await fetch("/api", {
+          const url = configs["verifyApiURL"];
+          console.log(url);
+          const result = await fetch(url, {
             method: "POST",
-            body: JSON.stringify(userData),
             headers: {
               "Content-Type": "application/json",
             },
+            body: JSON.stringify(userData),
           });
-          console.log(result);
+
           const response = await result.json();
 
           // for debug
           console.log(response);
-          const status = response["status"];
+
+          const gotRoles = response["roles"].length;
 
           toast.dismiss("waitAPIToast");
 
-          if (status === "OK") {
+          if (gotRoles > 0) {
             setVerifiedStatus("Verified");
             successToast(
               "Verified!! You will get verified role(s) as soon as possible."
@@ -218,7 +222,9 @@ function App() {
         }
       };
 
-      verify();
+      (async () => {
+        verify();
+      })();
     }
 
     // for debug
