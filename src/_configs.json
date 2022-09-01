@@ -1,0 +1,3 @@
+{
+  "verifyApiURL": "<http(s)>://<url>/api/verify"
+}
