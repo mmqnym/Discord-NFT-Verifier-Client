@@ -171,14 +171,14 @@ function App() {
   useEffect(() => {
     if (userAddress !== "0x0") {
       const discordUserName = discordUser["username"];
-      const discordUserID = discordUser["id"];
+      const discordUserId = discordUser["id"];
 
       waitingToast("waitAPIToast", "Verifying...");
 
       const verify = async () => {
         const userData = {
           userName: discordUserName,
-          userID: discordUserID,
+          userId: discordUserId,
           walletAddress: userAddress,
         };
 
@@ -195,6 +195,13 @@ function App() {
             },
             body: JSON.stringify(userData),
           });
+
+          if (result.status >= 500) {
+            toast.dismiss("waitAPIToast");
+            setVerifiedStatus("Error");
+            errToast("Server internal error!");
+            return;
+          }
 
           const response = await result.json();
 
