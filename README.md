@@ -1,6 +1,6 @@
 # Discord NFT Verifier - Client
 
-<a href="https://github.com/0xmimiQ/Discord-NFT-Verifier-Server/blob/main/README.md"><img src="https://img.shields.io/badge/Language-English-9cf?style=for-the-badge" /></a> &nbsp;<a href="https://github.com/0xmimiQ/Discord-NFT-Verifier-Server/blob/main/doc/README_CN.md"><img src="https://img.shields.io/badge/Language-%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-9cf?style=for-the-badge" /></a> &nbsp;<a href="https://github.com/0xmimiQ/Discord-NFT-Verifier-Server/blob/main/doc/README_JP.md"><img src="https://img.shields.io/badge/Language-%E6%97%A5%E6%9C%AC%E8%AA%9E-9cf?style=for-the-badge" /></a>
+<a href="https://github.com/0xmimiQ/Discord-NFT-Verifier-Client/blob/main/README.md"><img src="https://img.shields.io/badge/Language-English-9cf?style=for-the-badge" /></a> &nbsp;<a href="https://github.com/0xmimiQ/Discord-NFT-Verifier-Client/blob/main/doc/README_CN.md"><img src="https://img.shields.io/badge/Language-%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-9cf?style=for-the-badge" /></a> &nbsp;<a href="https://github.com/0xmimiQ/Discord-NFT-Verifier-Client/blob/main/doc/README_JP.md"><img src="https://img.shields.io/badge/Language-%E6%97%A5%E6%9C%AC%E8%AA%9E-9cf?style=for-the-badge" /></a>
 
 > Source code
 
