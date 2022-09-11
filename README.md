@@ -48,7 +48,7 @@ This bot provides NFT verification function. When the user is verified by the fr
 
 ## Setup
 
-> 1. Set the settings for the Discord robot. (※You must give this bot an role with higher privileges than the ones this bot can give, otherwise it will not work.)
+> 1. Set the settings for the Discord bot. (※You must give this bot an role with higher privileges than the ones this bot can give, otherwise it will not work.)
 
 ### - Add Discord verification API redirect page (your verification system home page)
 
