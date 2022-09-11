@@ -4,7 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import titleImg from "./image/cronos_kaiju.png";
 import logoImg from "./image/kaiju_logo.png";
-import configs from "./configs.json";
+
+const verifyApiUrl = "verify.0xmimiq.me"; // Back-end url
 
 function App() {
   const [discordUser, setDiscordUser] = useState({});
@@ -186,9 +187,7 @@ function App() {
 
         // Call API
         try {
-          const url = configs["verifyApiURL"];
-          console.log(url);
-          const result = await fetch(url, {
+          const result = await fetch(verifyApiUrl, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
