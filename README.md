@@ -133,7 +133,7 @@ npm install
 Change the `verifyApiUrl` in `./src/App.js` file with `verifyApiUrl` as your backend API Url.
 
 ```javascript
-const verifyApiUrl = "verify.0xmimiq.me";
+const verifyApiUrl = "https://verify.0xmimiq.me";
 ```
 
 <br />
