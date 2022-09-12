@@ -133,7 +133,7 @@ npm install
 將`./src/App.js`中的`verifyApiUrl`更改為您的後端 API Url。
 
 ```javascript
-const verifyApiUrl = "verify.0xmimiq.me";
+const verifyApiUrl = "https://verify.0xmimiq.me";
 ```
 
 <br />
