@@ -133,7 +133,7 @@ npm install
 `.src/App.js`の`verifyApiUrl`をバックエンドの API Url に変更します。
 
 ```javascript
-const verifyApiUrl = "verify.0xmimiq.me";
+const verifyApiUrl = "https://verify.0xmimiq.me";
 ```
 
 <br />
